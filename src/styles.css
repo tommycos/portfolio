@@ -27,20 +27,11 @@ nav {
   -webkit-user-select: none;
 }
 
-#nav--about {
+#nav--about,#nav--cv, #nav--projects {
   background-color: #ffffff;
   color: black;
 }
 
-#nav--cv {
-  background-color: #ffffff;
-  color: black;
-}
-
-#nav--projects {
-  background-color: #ffffff;
-  color: black;
-}
 a > img {
   width: 25px;
   margin: 10px;
@@ -48,4 +39,16 @@ a > img {
 #nav--mail {
   background-color: #ffffff;
   border-radius: 2px;
+}
+
+#about--main{
+display: flex;
+align-items: center;
+}
+
+#about--face{
+  width: 20%;
+  margin: 100px 50px 0 5%;
+  border-radius: 5px;
+  border: #1a1b21 solid;
 }

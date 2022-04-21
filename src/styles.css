@@ -4,11 +4,17 @@
 --alt-theme-colour: #ffffff;
 --main-font-colour: #1a1b21;
 --alt-font-colour: #ffffff;
---theme-picker-colour: rgba(29, 31, 37,0.99);
+--theme-picker-colour: rgba(29, 31, 37,0.9);
 }
 
+*{
+  box-sizing: border-box;
+}
 body {
+  position: relative;
   margin: 0;
+  padding-bottom: 110px;
+  min-height: 100vh;
   font-family: "Oswald", sans-serif;
   background-color: var(--main-bg-colour);
   -webkit-font-smoothing: antialiased;
@@ -45,11 +51,11 @@ nav {
 }
 
 a > img {
-  width: 24px;
+  width: 32px;
   margin: 10px;
 }
 #nav--palette {
-  width: 24px;
+  width: 30px;
   margin: 10px;
   cursor: pointer;
 }
@@ -58,6 +64,7 @@ a > img {
  display: flex;
  align-items: center;
  color: var(--main-font-colour);
+ font-size: 32px;
 }
 
 #about--face{
@@ -100,4 +107,30 @@ a > img {
   transform: scale(1.1);
   transition: transform 500ms;
   cursor: pointer;
+}
+
+.footer--container{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  border-top: var(--main-theme-colour) solid 1px;
+  color: var(--main-font-colour);
+  font-size: 13px;
+  text-align: center
+}
+
+.footer--container > p{
+  margin-right: 20px;
+}
+
+.link{
+  color: var(--main-font-colour);
+  text-decoration: underline;
+  cursor: pointer;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }

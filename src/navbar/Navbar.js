@@ -1,6 +1,5 @@
 import React from "react";
-import github from "./img/github.png";
-import linkedin from "./img/linkedin.png";
+
 import palettebl from "./img/paletteblack.png";
 import palettewh from "./img/palettewhite.png";
 
@@ -29,21 +28,6 @@ class Navbar extends React.Component {
           </nav>
         </div>
         <section className="nav--socials">
-          <a
-            href="https://www.linkedin.com/in/tomislav-cosic-0033aa235/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={linkedin} alt="linkedin" />
-          </a>
-
-          <a
-            href="https://github.com/tommycos"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={github} alt="github" />
-          </a>
           <img
             src={palette}
             alt="paletteicon"

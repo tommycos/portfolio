@@ -4,6 +4,7 @@ import About from "./about/About";
 import Cv from "./cv/Cv";
 import Projects from "./projects/Projects";
 import ColourBox from "./navbar/ColourBox";
+import Footer from "./footer/Footer";
 import data from "./navbar/data/colourData";
 //import { CSSTransition } from "react-transition-group";
 
@@ -52,12 +53,7 @@ export default function App() {
       {navClick === 0 && <About />}
       {navClick === 1 && <Cv />}
       {navClick === 2 && <Projects />}
+      <Footer onClick={changeNav} needsBlack={needsBlack} />
     </main>
   );
 }
-/* <CSSTransition
-        in={isColour}
-        timeout={300}
-        classNames="colour-transition"
-        unmountOnExit
-      >      </CSSTransition>*/

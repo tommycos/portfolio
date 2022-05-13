@@ -6,7 +6,14 @@ class About extends React.Component {
     return (
       <main id="about--main">
         <img src={face} alt="mugshot" id="about--face" />
-        <p>This is my about me page, WELCOME</p>
+        <section>
+          <h2 className="about--lead">Hello, my name is Tomislav Cosic</h2>
+          <h2 className="about--lead">I strive to become a web developer.</h2>
+          <p>
+            My interests lie not only in front-end but also in back-end
+            development so as to one day be considered a full stack developer.
+          </p>
+        </section>
       </main>
     );
   }

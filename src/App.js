@@ -12,6 +12,7 @@ export default function App() {
   const [navClick, setNavClick] = useState(0);
   const [isColour, setIsColour] = useState(false);
   const [needsBlack, setNeedsBlack] = useState(false);
+  const [lightGit, setLightGit] = useState(false);
 
   const boxCreate = data.map((data) => {
     return (
@@ -19,7 +20,7 @@ export default function App() {
         key={data.id}
         isColour={isColour}
         {...data}
-        whatTheme={() => determineTheme(data.needsBlack)}
+        whatTheme={() => determineTheme(data.needsBlack, data.lightGit)}
       />
     );
   });
@@ -32,14 +33,14 @@ export default function App() {
     setIsColour((prevIsColour) => !prevIsColour);
   }
 
-  function determineTheme(needs) {
+  function determineTheme(needs, git) {
     setNeedsBlack((prevNeed) => (prevNeed = needs));
+    setLightGit((prevGit) => (prevGit = git));
   }
   let dropdown = "dropdown";
   if (isColour) {
     dropdown = "dropdown--active";
   }
-
   return (
     <main>
       <div id={dropdown}>{boxCreate}</div>
@@ -53,7 +54,7 @@ export default function App() {
       {navClick === 0 && <About />}
       {navClick === 1 && <Cv />}
       {navClick === 2 && <Projects />}
-      <Footer onClick={changeNav} needsBlack={needsBlack} />
+      <Footer onClick={changeNav} lightGit={lightGit} />
     </main>
   );
 }

@@ -7,7 +7,7 @@ class ColourBox extends React.Component {
       mainBg,
       themeName,
       mainTheme,
-      altTheme,
+      specialFont,
       mainFont,
       altFont,
       whatTheme,
@@ -27,8 +27,8 @@ class ColourBox extends React.Component {
         mainTheme
       );
       document.documentElement.style.setProperty(
-        "--alt-theme-colour",
-        altTheme
+        "--special-font-colour",
+        specialFont
       );
       document.documentElement.style.setProperty(
         "--main-font-colour",

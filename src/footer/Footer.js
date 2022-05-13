@@ -4,9 +4,9 @@ import gitlight from "./img/gitlight.png";
 import linkedin from "./img/linkedin.png";
 class Footer extends Component {
   render() {
-    const { onClick, needsBlack } = this.props;
+    const { onClick, lightGit } = this.props;
     let github = gitdark;
-    if (needsBlack) {
+    if (lightGit) {
       github = gitlight;
     }
     let date = new Date();
@@ -25,7 +25,7 @@ class Footer extends Component {
           <strong>Contact</strong>
           <br></br>
           <a href="mailto: cos.tomislav@gmail.com" className="link">
-            Email
+            cos.tomislav@gmail.com
           </a>
         </p>
         <a

@@ -1,7 +1,7 @@
 :root{
 --main-bg-colour: #ffffff;
 --main-theme-colour:rgba(29, 31, 37,1);
---alt-theme-colour: #ffffff;
+--special-font-colour: #EF8354;
 --main-font-colour: #1a1b21;
 --alt-font-colour: #ffffff;
 --theme-picker-colour: rgba(29, 31, 37,0.9);
@@ -46,7 +46,7 @@ nav {
 }
 
 #nav--about,#nav--cv, #nav--projects {
-  background-color: var(--alt-theme-colour);
+  background-color: var(--main-bg-colour);
   color: var(--main-font-colour);
 }
 
@@ -69,11 +69,25 @@ a > img {
 
 #about--face{
   width: 300px;
-  margin: 100px 50px 0 5%;
-  border-radius: 5px;
-  border: var(--main-theme-colour) solid;
+  margin: 100px 50px 0 100px;
+  border-radius: 1px;
+  border: var(--main-theme-colour) inset;
 }
 
+.about--lead{
+  color: var(--special-font-colour);
+  margin: 0;
+}
+
+#cv--main{
+  display: block;
+}
+#cv--main > h3{
+  color: var(--special-font-colour);
+}
+.cv--list{
+  list-style: none;
+}
 #dropdown{
   max-height: 0px;
   background-color: var(--theme-picker-colour);
